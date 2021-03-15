@@ -32,6 +32,7 @@ let kv2: KeyPair = { key:1, val:"Steve" }; // Compiler Error: 'val' doesn't exis
 ```
 Here, we created an interface which defined the structure of a type called KeyPair. kv1 is declared as a KeyPair type. kv1 worked because it matched the type KeyPair. 
 
+
 #### Interface as a function type
 ```
 interface KeyValueProcessor
@@ -49,3 +50,10 @@ interface NumList {
 }
 ```
 The interface defines an array type which has numerical indices (0,1,2,3,4,..) and the value at each index is a number. 
+
+## JavaScript
+
+### Syntax
+//If the first argument is true, then ourString becomes Hello World!
+const ourString = true && 'Hello World!'
+console.log(ourString)
