@@ -55,5 +55,7 @@ The interface defines an array type which has numerical indices (0,1,2,3,4,..) a
 
 ### Syntax
 //If the first argument is true, then ourString becomes Hello World!
+```
 const ourString = true && 'Hello World!'
 console.log(ourString)
+```
