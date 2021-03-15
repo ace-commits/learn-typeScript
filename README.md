@@ -54,8 +54,19 @@ The interface defines an array type which has numerical indices (0,1,2,3,4,..) a
 ## JavaScript
 
 ### Syntax
+
+### 1
 //If the first argument is true, then ourString becomes Hello World!
 ```
 const ourString = true && 'Hello World!'
 console.log(ourString)
 ```
+### 2
+We use ```else if``` because it allows you to skip unnecessary checks. For example:
+```
+if()
+else if()
+else if()
+else if()
+```
+If the first else if() worked, then it doesn't check the next else ifs. This is more efficient. If we only used if statements, then it will check each if statement. 
