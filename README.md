@@ -100,7 +100,7 @@ function makePromise(x) {
 - Therefore, makePromise(1) returns 1, which is why console.log(x) logs 1. 
 - **asyncFunc()** returns x:
   - **asyncFunc()** being asynchronous returns a promise. Since the returned value is **x**, this means that the Promise is resolved with the value of **x**. 
-  - When an asynchronous function returns a value, then the promise is resolved with that value
+  - When an asynchronous function returns a value, in this example it returns x, then the promise is resolved with that value (which means we can access it using .then())
   - When an asynchronous function throws an exception, the Promise will be rejected with the thrown value/exception
 - If you try to console.log(returnedProm), it will print a promise, it will not print a value.  
 - **.then()** keyword:
@@ -123,4 +123,5 @@ function makePromise(x) {
      ```
     - Explanation:
       - We created a new promise called p1. The promise constructor takes in a resolution function and a rejection function. 
-      - On resolution, the value passed in the resolution function becomes an argument to the onFullfilled function. 
+      - On resolution, the value passed in the resolution function becomes an argument to the onFullfilled function.
+- Becuase .then() has access to the resolved value of a promise, then it will have access to x. We pass x to the onFullfilled function of .then() and print it. 
