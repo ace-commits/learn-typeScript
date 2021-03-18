@@ -70,3 +70,38 @@ else if()
 else if()
 ```
 If the first else if() worked, then it doesn't check the next else ifs. This is more efficient. If we only used if statements, then it will check each if statement. 
+
+### Async/Await
+#### Example and Explanation 
+```
+function makePromise(x) { 
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(x);
+      }, 1000);
+    });
+  }
+  
+  async function asyncFunc() {
+    var x = await makePromise(1); // the function is paused here until the promise is fulfilled
+    console.log(x); // logs 1
+    return x;
+  }
+  
+  const returnedProm = asyncFunc(); // the async func returns a promise
+
+ returnedProm.then((x) => console.log(x));
+  // This promise is fulfilled with the return value from the async func, so this logs 1
+ ```
+- In this example, asyncFunc() is called. It is asynchronous, therefore, you can use await in it.
+- Inside asyncFunc(), makePromise(1) is called with await infront of it. 
+- **await** causes **asyncFunc** to pause until the promise is settled.
+- Inside makePromise(x), the promise resolves after a second. It resolves with the value of x. 
+- Therefore, makePromise(1) returns 1, which is why console.log(x) logs 1. 
+- **asyncFunc()** returns x:
+  - **asyncFunc()** being asynchronous returns a promise. Since the returned value is **x**, this means that the Promise is resolved with the value of **x**. 
+  - When an asynchronous function returns a value, then the promise is resolved with that value
+  - When an asynchronous function throws an exception, the Promise will be rejected with the thrown value/exception
+- If you try to console.log(returnedProm), it will print a promise, it will not print a value.  
+- **.then()** keyword:
+  - In this
