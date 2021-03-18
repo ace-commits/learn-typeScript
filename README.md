@@ -104,4 +104,6 @@ function makePromise(x) {
   - When an asynchronous function throws an exception, the Promise will be rejected with the thrown value/exception
 - If you try to console.log(returnedProm), it will print a promise, it will not print a value.  
 - **.then()** keyword:
-  - In this
+  - .then takes in two arguments (both are optional):
+    - onFulfilled: A Function called if the Promise is fulfilled. This function has one argument, the fulfillment value.
+    - 
