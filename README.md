@@ -121,4 +121,6 @@ function makePromise(x) {
       console.error(reason); // Error!
       })
      ```
-    - Explanation: 
+    - Explanation:
+     - We created a new promise called p1. The promise constructor takes in a resolution function and a rejection function. 
+     - On resolution, the value passed in the resolution function becomes an argument to the onFullfilled function. 
