@@ -104,6 +104,21 @@ function makePromise(x) {
   - When an asynchronous function throws an exception, the Promise will be rejected with the thrown value/exception
 - If you try to console.log(returnedProm), it will print a promise, it will not print a value.  
 - **.then()** keyword:
-  - .then takes in two arguments (both are optional):
-    - onFulfilled: A Function called if the Promise is fulfilled. This function has one argument, the fulfillment value.
-    - 
+  - .then takes in two arguments (both are optional) and it returns a promise which allows for **chaining**:
+   - onFulfilled: this is a Function that is called if the Promise is fulfilled. This function has one argument, the fulfillment value.
+   - onRejected: this is a Function that is called if the Promise is rejected. This function has one argument, the rejection reason. If it is not a function, it is internally replaced with a "Thrower" function (it throws an error it received as argument).
+   - Example:
+     ```
+      var p1 = new Promise((resolve, reject) => {
+      resolve('Success!');
+      // or
+      // reject(new Error("Error!"));
+      });
+
+      p1.then(value => {
+      console.log(value); // Success!
+      }, reason => {
+      console.error(reason); // Error!
+      })
+     ```
+    - Explanation: 
