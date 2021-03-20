@@ -71,6 +71,18 @@ else if()
 ```
 If the first else if() worked, then it doesn't check the next else ifs. This is more efficient. If we only used if statements, then it will check each if statement. 
 
+### 3
+
+`.filter()`: the filter method creates a new array with the elements that passed a check. The array result is created with all the words that have a word length greater than 6. 
+```
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
+// expected output: Array ["exuberant", "destruction", "present"]
+
+```
 ### Async/Await
 #### Example and Explanation 
 ```
