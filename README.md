@@ -83,6 +83,14 @@ console.log(result);
 // expected output: Array ["exuberant", "destruction", "present"]
 
 ```
+
+### 4
+The nullish coalescing operator is a logical operator that accepts two operands:
+
+```leftExpression ?? rightExpression```
+
+It returns the right operand (rightExpression) if the left operand (leftExpression) is null or undefined.
+
 ### Async/Await
 #### Example and Explanation 
 ```
