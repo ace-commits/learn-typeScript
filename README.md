@@ -91,6 +91,10 @@ The nullish coalescing operator is a logical operator that accepts two operands:
 
 It returns the right operand (rightExpression) if the left operand (leftExpression) is null or undefined.
 
+### 5
+`const` is a signal that the variable won’t be reassigned. It is a constant, you cannot change its value. No global scope, but function and block scope. 
+`let` is a signal that the variable may be reassigned, such as a counter in a loop, or a value swap in an algorithm. No global scope, but function and block scope.
+`var` is now the weakest signal available when you define a variable in JavaScript. The variable may or may not be reassigned, and the variable has a global scope and a function scope but not a block scope.
 ### Async/Await
 #### Example and Explanation 
 ```
