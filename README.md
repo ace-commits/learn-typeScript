@@ -1,4 +1,4 @@
-# Web Development Guide by Bashar Abu Ein
+# SWE Guide by Bashar Abu Ein
 
 ## TypeScript
 ### Type Annotation and Type Aliasing
@@ -51,6 +51,8 @@ interface NumList {
 ```
 The interface defines an array type which has numerical indices (0,1,2,3,4,..) and the value at each index is a number. 
 
+
+
 ## JavaScript
 
 ### Syntax
@@ -95,6 +97,19 @@ It returns the right operand (rightExpression) if the left operand (leftExpressi
 `const` is a signal that the variable won’t be reassigned. It is a constant, you cannot change its value. No global scope, but function and block scope. 
 `let` is a signal that the variable may be reassigned, such as a counter in a loop, or a value swap in an algorithm. No global scope, but function and block scope.
 `var` is now the weakest signal available when you define a variable in JavaScript. The variable may or may not be reassigned, and the variable has a global scope and a function scope but not a block scope.
+### 6 : Optional Chaining operator: '?.'
+- The optional chaining operator allows you to read the value of a property or run a function in the chain of connected objects without causing an error if that property or function do not exist. 
+- ```obj.first?.second```: 
+  - JS will check if ```obj.first``` exists
+  - If it does not exist, then it will return undefined 
+  - Assuming we had ```obj.first.second```, then this will return an Error if ```obj.first``` does not exist: ```Error: Cannot read property 'second' of undefined```
+- Syntax:
+ ```
+  obj.val?.prop
+  obj.val?.[expr]
+  obj.arr?.[index]
+  obj.func?.(args)
+ ```
 ### Async/Await
 #### Example and Explanation 
 ```
